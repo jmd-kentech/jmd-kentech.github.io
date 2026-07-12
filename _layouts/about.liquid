@@ -29,8 +29,12 @@ layout: default
             {% assign profile_image_class = 'img-fluid z-depth-1
       rounded' %}
           {% endif %}
+          {% if page.profile.align == 'center' %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 }}px, 95vw"{% endcapture %}
+        {% else %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
+        {% endif %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
@@ -46,9 +50,7 @@ layout: default
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
+      <h2>news</h2>
       {% include news.liquid limit=true %}
     {% endif %}
 
