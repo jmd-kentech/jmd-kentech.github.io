@@ -1,57 +1,28 @@
 ---
-layout: page
-permalink: /members/
-title: members
+layout: profiles
+permalink: /people/
+title: people
+description: members of the lab or group
 nav: true
-nav_order: 1
-_styles: >
-  .member-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1rem;
-  }
-  .member-card {
-    text-align: center;
-    padding: 1.75rem 1rem;
-    border-radius: 8px;
-    background: var(--global-card-bg-color);
-    transition: transform 0.2s, box-shadow 0.2s;
-    text-decoration: none;
-    display: block;
-    color: var(--global-text-color);
-  }
-  .member-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    text-decoration: none;
-    color: var(--global-text-color);
-  }
-  .member-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 0.6rem;
-  }
-  .member-card .member-name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.2rem;
-  }
-  .member-card .member-role {
-    font-size: 1.25rem;
-    color: var(--global-text-color-light);
-  }
----
+nav_order: 7
 
-<div class="member-grid">
-  {% for member in site.data.members %}
-  <a href="{{ member.url | relative_url }}" class="member-card">
-    {% assign img_path = member.image | prepend: 'assets/img/' %}
-    {% include figure.liquid path=img_path alt=member.name loading="eager" %}
-    <div class="member-name">{{ member.name }}</div>
-    <div class="member-role">{{ member.role }}</div>
-  </a>
-  {% endfor %}
-</div>
+profiles:
+  # if you want to include more than one profile, just replicate the following block
+  # and create one content file for each profile inside _pages/
+  - align: right
+    image: prof_pic.jpg
+    content: about_einstein.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+      <p>555 your office number</p>
+      <p>123 your address street</p>
+      <p>Your City, State 12345</p>
+  - align: left
+    image: prof_pic.jpg
+    content: about_einstein.md
+    image_circular: false # crops the image to make it circular
+    more_info: >
+      <p>555 your office number</p>
+      <p>123 your address street</p>
+      <p>Your City, State 12345</p>
+---
