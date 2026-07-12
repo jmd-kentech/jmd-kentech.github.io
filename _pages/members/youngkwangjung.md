@@ -18,6 +18,10 @@ profile:
 _styles: >
   .profile { width: 25%; }
   .post-title { display: none; }
+  @media (max-width: 576px) {
+    .post article > div { flex-direction: column; }
+    .profile { width: 100%; }
+  }
 
 selected_papers: true
 social: false
