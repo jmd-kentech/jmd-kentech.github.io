@@ -40,7 +40,7 @@ _styles: >
   .member-card .member-name {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0;
   }
   .member-card .member-name-sub {
     font-size: 1.5rem;
