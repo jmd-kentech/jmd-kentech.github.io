@@ -1,9 +1,7 @@
 ---
 layout: profiles
-title: youngkwang
-permalink: /pi/
-nav: true
-nav_order: 1
+title: Young-Kwang Jung
+permalink: /members/youngkwangjung/
 _styles: >
   .post-header { display: none; }
   .post article hr:first-of-type { display: none; }
