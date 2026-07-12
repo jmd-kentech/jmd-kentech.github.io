@@ -1,7 +1,7 @@
 ---
 layout: about
 title: Young-Kwang Jung
-permalink: /members/young-kwang-jung/
+permalink: /members/youngkwangjung/
 
 profile:
   align: right
