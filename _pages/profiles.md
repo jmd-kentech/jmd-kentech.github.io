@@ -6,7 +6,7 @@ nav: true
 nav_order: 1
 _styles: >
   .post-header { display: none; }
-  .post article hr { display: none; }
+  .post article hr:first-of-type { display: none; }
 
 profiles:
   # if you want to include more than one profile, just replicate the following block
