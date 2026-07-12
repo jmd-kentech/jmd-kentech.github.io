@@ -42,6 +42,10 @@ _styles: >
     font-weight: 600;
     margin-bottom: 0.2rem;
   }
+  .member-card .member-name-sub {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
   .member-card .member-role {
     font-size: 1.25rem;
     color: var(--global-text-color-light);
@@ -54,6 +58,7 @@ _styles: >
     {% assign img_path = member.image | prepend: 'assets/img/' %}
     {% include figure.liquid path=img_path alt=member.name loading="eager" %}
     <div class="member-name">{{ member.name }}</div>
+    {% if member.name_sub %}<div class="member-name-sub">{{ member.name_sub }}</div>{% endif %}
     <div class="member-role">{{ member.role }}</div>
   </a>
   {% endfor %}
