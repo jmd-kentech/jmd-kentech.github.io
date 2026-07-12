@@ -1,0 +1,19 @@
+---
+layout: about
+title: Young-Kwang Jung
+permalink: /members/young-kwang-jung/
+
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: false
+  more_info: >
+    <p>Assistant Professor</p>
+    <p>Department of Energy Engineering</p>
+    <p>KENTECH, Naju, South Korea</p>
+
+selected_papers: true
+social: true
+---
+
+Write PI biography here.
