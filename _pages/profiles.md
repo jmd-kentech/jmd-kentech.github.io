@@ -35,12 +35,12 @@ _styles: >
     margin-bottom: 0.6rem;
   }
   .member-card .member-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.2rem;
   }
   .member-card .member-role {
-    font-size: 0.85rem;
+    font-size: 1.25rem;
     color: var(--global-text-color-light);
   }
 ---
