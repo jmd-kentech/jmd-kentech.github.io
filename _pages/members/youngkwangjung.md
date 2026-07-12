@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: member
 title: Young-Kwang Jung
 permalink: /members/youngkwangjung/
 

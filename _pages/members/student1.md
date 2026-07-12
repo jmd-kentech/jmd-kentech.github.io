@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: member
 title: Graduate Student 1
 permalink: /members/student1/
 

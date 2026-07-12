@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: member
 title: Undergraduate Student 1
 permalink: /members/undergrad1/
 
