@@ -43,7 +43,8 @@ _styles: >
     margin-bottom: 0.2rem;
   }
   .member-card .member-name-sub {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 0.2rem;
   }
   .member-card .member-role {
