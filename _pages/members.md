@@ -15,9 +15,9 @@ _styles: >
   @media (max-width: 576px) {
     .member-grid { grid-template-columns: 1fr; }
     .member-card img {
-      width: 250px !important;
-      height: 250px !important;
-      max-width: 250px;
+      width: 500px !important;
+      height: 500px !important;
+      max-width: 500px;
     }
   }
   .member-card {
