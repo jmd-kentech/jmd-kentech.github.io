@@ -8,6 +8,7 @@ profile:
   align: center
   image: group_logo.png
   image_circular: false
+  full_width: true
   more_info:
 
 selected_papers: false
