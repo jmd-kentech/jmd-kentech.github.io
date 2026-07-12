@@ -15,6 +15,7 @@ profile:
 
 _styles: >
   .profile { max-width: 25%; }
+  .post-title { font-size: 1.8rem; }
 
 selected_papers: true
 social: false
