@@ -10,11 +10,11 @@ profile:
   more_info: >
     <div style="margin-top: 0.5rem; font-size: 2.8rem; display: flex; gap: 0.75rem; justify-content: center;">
       <a href="mailto:you@example.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?user=qc6CJjYAAAAJ" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://scholar.google.com/citations?user=gKwOFtUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
     </div>
 
 _styles: >
-  .profile { max-width: 15%; }
+  .profile { max-width: 25%; }
 
 selected_papers: true
 social: false
