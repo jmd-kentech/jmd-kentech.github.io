@@ -7,13 +7,13 @@ nav_order: 1
 _styles: >
   .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
     margin-top: 1rem;
   }
   .member-card {
     text-align: center;
-    padding: 1rem 0.75rem;
+    padding: 1.75rem 1rem;
     border-radius: 8px;
     background: var(--global-card-bg-color);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -28,19 +28,19 @@ _styles: >
     color: var(--global-text-color);
   }
   .member-card img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0.6rem;
   }
   .member-card .member-name {
-    font-size: 0.88rem;
+    font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.2rem;
   }
   .member-card .member-role {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     color: var(--global-text-color-light);
   }
 ---
