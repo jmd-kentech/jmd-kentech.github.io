@@ -1,11 +1,11 @@
 ---
 layout: member
-title: Young-Kwang Jung
+title: Prof. Young-Kwang Jung
 permalink: /members/youngkwangjung/
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: youngkwangjung_pic.png
   image_circular: false
   more_info: >
     <p>Assistant Professor</p>
