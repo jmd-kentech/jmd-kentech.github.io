@@ -15,10 +15,12 @@ profile:
 
 _styles: >
   .profile { max-width: 25%; }
-  .post-title { font-size: 1.8rem; }
+  .post-title { display: none; }
 
 selected_papers: true
 social: false
 ---
+
+## Prof. Young-Kwang Jung
 
 Write PI biography here.
