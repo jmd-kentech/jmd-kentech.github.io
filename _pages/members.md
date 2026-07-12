@@ -31,9 +31,11 @@ _styles: >
     text-decoration: none;
     color: var(--global-text-color);
   }
+  .member-card figure { display: flex; justify-content: center; }
   .member-card img {
-    width: 150px;
-    height: 150px;
+    width: 150px !important;
+    height: 150px !important;
+    max-width: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0.6rem;
