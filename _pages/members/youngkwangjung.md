@@ -6,7 +6,7 @@ permalink: /members/youngkwangjung/
 profile:
   align: right
   image: youngkwangjung_pic.png
-  image_circular: false
+  image_circular: true
   more_info: >
     <p>Assistant Professor</p>
     <p>Department of Energy Engineering</p>
