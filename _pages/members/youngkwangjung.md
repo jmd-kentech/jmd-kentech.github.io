@@ -5,7 +5,7 @@ permalink: /members/youngkwangjung/
 
 profile:
   align: left
-  image: youngkwangjung_pic.png
+  image: youngkwangjung_profile.png
   image_circular: true
   more_info: >
     <p>Assistant Professor</p>
