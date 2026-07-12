@@ -1,7 +1,9 @@
 ---
 layout: member
-title: Prof. Young-Kwang Jung
-permalink: /members/youngkwangjung/
+title: P.I.
+permalink: /pi/
+nav: true
+nav_order: 1
 
 profile:
   align: left
