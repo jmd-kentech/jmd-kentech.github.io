@@ -4,7 +4,7 @@ title: Prof. Young-Kwang Jung
 permalink: /members/youngkwangjung/
 
 profile:
-  align: right
+  align: left
   image: youngkwangjung_pic.png
   image_circular: true
   more_info: >
