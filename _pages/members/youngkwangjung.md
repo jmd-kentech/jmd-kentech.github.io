@@ -1,6 +1,6 @@
 ---
 layout: profiles
-title: P.I.
+title: youngkwang
 permalink: /pi/
 nav: true
 nav_order: 1
