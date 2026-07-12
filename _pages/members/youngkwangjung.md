@@ -14,13 +14,14 @@ profile:
     </div>
 
 _styles: >
-  .profile { max-width: 25%; }
+  .profile { width: 25%; }
   .post-title { display: none; }
 
 selected_papers: true
 social: false
 ---
 
-## Prof. Young-Kwang Jung
+## Young-Kwang Jung (정영광)
 
-Write PI biography here.
+**B.S.** Department of Materials Science and Engineering, Yonsei University  
+**Ph.D.** Department of Materials Science and Engineering, Yonsei University  
