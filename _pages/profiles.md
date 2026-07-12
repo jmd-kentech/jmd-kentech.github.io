@@ -4,19 +4,54 @@ permalink: /members/
 title: members
 nav: true
 nav_order: 1
+_styles: >
+  .member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .member-card {
+    text-align: center;
+    padding: 1rem 0.75rem;
+    border-radius: 8px;
+    background: var(--global-card-bg-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    display: block;
+    color: var(--global-text-color);
+  }
+  .member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    text-decoration: none;
+    color: var(--global-text-color);
+  }
+  .member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.6rem;
+  }
+  .member-card .member-name {
+    font-size: 0.88rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .member-card .member-role {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+  }
 ---
 
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+<div class="member-grid">
   {% for member in site.data.members %}
-  <a href="{{ member.url | relative_url }}" class="no-underline">
-    <div class="card hoverable flex flex-col items-center text-center p-4 h-full">
-      <img src="{{ member.image | prepend: '/assets/img/' | relative_url }}"
-           class="rounded-full mb-3"
-           style="width: 110px; height: 110px; object-fit: cover;"
-           alt="{{ member.name }}">
-      <p class="font-semibold mb-1" style="font-size: 0.9rem;">{{ member.name }}</p>
-      <p class="text-muted" style="font-size: 0.78rem;">{{ member.role }}</p>
-    </div>
+  <a href="{{ member.url | relative_url }}" class="member-card">
+    {% assign img_path = member.image | prepend: 'assets/img/' %}
+    {% include figure.liquid path=img_path alt=member.name loading="eager" %}
+    <div class="member-name">{{ member.name }}</div>
+    <div class="member-role">{{ member.role }}</div>
   </a>
   {% endfor %}
 </div>

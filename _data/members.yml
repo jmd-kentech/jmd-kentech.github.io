@@ -5,10 +5,10 @@
 
 - name: Graduate Student 1
   role: Ph.D. Student
-  image: placeholder.jpg
+  image: prof_pic.jpg
   url: /members/student1/
 
 - name: Undergraduate Student 1
   role: Undergraduate Researcher
-  image: placeholder.jpg
+  image: prof_pic.jpg
   url: /members/undergrad1/
