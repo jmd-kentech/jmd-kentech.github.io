@@ -11,7 +11,7 @@ profile:
   image_circular: true
   more_info: >
     <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600; color: var(--global-theme-color);">Graduate Student 1</div>
-    <div style="margin-top: 0.5rem; font-size: 2.8rem; display: flex; gap: 0.75rem; justify-content: center;">
+    <div style="margin-top: 0.5rem; font-size: 2rem; display: flex; gap: 0.75rem; justify-content: center;">
       <a href="mailto:email@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
     </div>
 
@@ -27,8 +27,8 @@ latest_posts:
 
 <style>
   .post-header { display: none; }
-  .more-info a { color: inherit; transition: color 0.2s; }
-  .more-info a:hover { color: var(--global-theme-color) !important; }
+  .more-info a { color: inherit; transition: color 0.2s, transform 0.2s; display: inline-block; }
+  .more-info a:hover { color: var(--global-theme-color) !important; transform: scale(1.2); }
   article h2 { color: var(--global-text-color) !important; }
 </style>
 
