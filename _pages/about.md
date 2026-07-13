@@ -28,7 +28,7 @@ latest_posts:
   .profile figure img { width: 100% !important; max-width: 100% !important; box-shadow: none !important; }
 </style>
 
-<h2>Research</h2>
+<h2>Welcome</h2>
 <div class="news">
   <p>
     We are a computational materials design group at the Korea Institute of Energy Technology (KENTECH).<br>
@@ -37,7 +37,7 @@ latest_posts:
   </p>
 </div>
 
-<h2>news</h2>
+<h2>News</h2>
 <div class="news">
   <div class="table-responsive">
     <table class="table table-sm table-borderless">
