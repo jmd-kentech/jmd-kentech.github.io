@@ -73,11 +73,13 @@
       {% endif %}
     </div>
 
-    {% if entry.abstract %}
-      <!-- Hidden abstract block -->
+    {% if entry.cover or entry.abstract %}
       <div class="links">
-        <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+        {% if entry.cover %}<a href="{{ entry.cover }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0">Cover Art</a>{% endif %}
+        {% if entry.abstract %}<a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>{% endif %}
       </div>
+    {% endif %}
+    {% if entry.abstract %}
       <div class="abstract hidden">
         <p>{{ entry.abstract }}</p>
       </div>

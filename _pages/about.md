@@ -23,7 +23,7 @@ latest_posts:
 
 <style>
   .post-header { display: none; }
-  .profile { max-width: 100% !important; width: 100% !important; margin: 0 auto 1.5rem !important; }
+  .profile { max-width: 70% !important; width: 70% !important; margin: 0 auto 1.5rem !important; }
   .profile figure { max-width: 100% !important; width: 100% !important; margin: 0 !important; }
   .profile figure img { width: 100% !important; max-width: 100% !important; box-shadow: none !important; }
 </style>
