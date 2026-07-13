@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Jung Materials Design Group @ KENTECH # the website title (if blank, full name will be used instead)
+title: Jung Materials Design Group # the website title (if blank, full name will be used instead)
 first_name: Young-Kwang
 middle_name: 
 last_name: Jung
@@ -122,6 +122,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 blog_name:
 blog_description:
 permalink: /posts/:year/:title/
+future: true
 lsi: false # produce an index for related posts
 
 # Pagination

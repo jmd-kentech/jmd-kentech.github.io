@@ -4,13 +4,27 @@ permalink: /posts/
 title: posts
 nav: true
 nav_order: 3
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /posts/page/:num/
+  per_page: 10
+  sort_field: date
+  sort_reverse: true
+  trail:
+    before: 1
+    after: 3
 ---
 
 <div class="post">
 
   <ul class="post-list">
 
-    {% assign postlist = site.posts | sort: 'date' | reverse %}
+    {% if page.pagination.enabled %}
+      {% assign postlist = paginator.posts %}
+    {% else %}
+      {% assign postlist = site.posts %}
+    {% endif %}
 
     {% for post in postlist %}
       <li>
@@ -23,5 +37,9 @@ nav_order: 3
     {% endfor %}
 
   </ul>
+
+  {% if page.pagination.enabled %}
+    {% include pagination.liquid %}
+  {% endif %}
 
 </div>
