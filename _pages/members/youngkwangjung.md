@@ -13,6 +13,7 @@ profile:
     <div style="margin-top: 0.5rem; font-size: 2rem; display: flex; gap: 0.75rem; justify-content: center;">
       <a href="mailto:yk.jung@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://scholar.google.com/citations?user=gKwOFtUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+      <a href="https://orcid.org/0000-0003-3848-8163" title="ORCID" target="_blank"><i class="ai ai-orcid"></i></a>
       <a href="/assets/pdf/youngkwangjung_cv.pdf" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
     </div>
 
@@ -59,7 +60,7 @@ latest_posts:
       </tr>
       <tr>
         <th scope="row" style="width: 20%">2025–2026</th>
-        <td><strong>InnoCore Fellow</strong>, Department of Energy and Chemical Engineering,<br>Ulsan National Institute of Science and Technology (UNIST), Republic of Korea</td>
+        <td><strong>InnoCore Fellow</strong>, School of Energy and Chemical Engineering,<br>Ulsan National Institute of Science and Technology (UNIST), Republic of Korea</td>
       </tr>
       <tr>
         <th scope="row" style="width: 20%">2024–2025</th>
