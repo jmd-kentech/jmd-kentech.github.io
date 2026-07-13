@@ -1,1 +1,0 @@
-Biography coming soon.
