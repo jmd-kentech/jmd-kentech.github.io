@@ -6,8 +6,8 @@ overrides:
     gem_version: 1.0.11
     upstream_path: _includes/header.liquid
     upstream_sha256: c8663513baded68d9fa5fbe4d6363a976535bbe201efe5138243d0ff03101058
-    local_sha256: 7096f19b764a1e0821e24d77f3062318ab99c0e70f72cc0d1f33fa815ae6c623
-    acknowledged_at: '2026-07-12'
+    local_sha256: 1c456ff97558b60ce68b9606345fc2f0cd3d0b1dd963f4d990995af39a58685c
+    acknowledged_at: '2026-07-14'
   assets/css/main.scss:
     owner: al_folio_core
     gem_version: 1.0.11
