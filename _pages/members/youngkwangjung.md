@@ -38,11 +38,11 @@ latest_posts:
   <div class="table-responsive">
     <table class="table table-sm table-borderless">
       <tr>
-        <th scope="row" style="width: 20%">2021–2016</th>
+        <th scope="row" style="width: 20%">2016–2021</th>
         <td><strong>Ph.D.</strong> Materials Science and Engineering, Yonsei University, Republic of Korea</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2016–2012</th>
+        <th scope="row" style="width: 20%">2012–2016</th>
         <td><strong>B.S.</strong> Materials Science and Engineering, Yonsei University, Republic of Korea</td>
       </tr>
     </table>
@@ -54,27 +54,27 @@ latest_posts:
   <div class="table-responsive">
     <table class="table table-sm table-borderless">
       <tr>
-        <th scope="row" style="width: 20%">current-2026</th>
+        <th scope="row" style="width: 20%">2026-current</th>
         <td><strong>Assistant Professor</strong>, Department of Energy Engineering,<br>Korea Institute of Energy Technology (KENTECH), Republic of Korea</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2026–2025</th>
+        <th scope="row" style="width: 20%">2025–2026</th>
         <td><strong>InnoCore Fellow</strong>, Department of Energy and Chemical Engineering,<br>Ulsan National Institute of Science and Technology (UNIST), Republic of Korea</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2025–2024</th>
+        <th scope="row" style="width: 20%">2024–2025</th>
         <td><strong>Research Associate</strong>, Department of Chemical Engineering and Biotechnology,<br>University of Cambridge, United Kingdom</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2024–2023</th>
+        <th scope="row" style="width: 20%">2023–2024</th>
         <td><strong>Academic Visitor</strong>, Department of Materials, Imperial College London, United Kingdom</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2024–2022</th>
+        <th scope="row" style="width: 20%">2022–2024</th>
         <td><strong>Marie Skłodowska-Curie Fellow</strong>, Department of Chemical Engineering and Biotechnology,<br>University of Cambridge, United Kingdom</td>
       </tr>
       <tr>
-        <th scope="row" style="width: 20%">2022–2021</th>
+        <th scope="row" style="width: 20%">2021–2022</th>
         <td><strong>Postdoctoral Researcher</strong>, Department of Materials Science and Engineering,<br>Yonsei University, Republic of Korea</td>
       </tr>
     </table>
