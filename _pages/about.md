@@ -31,7 +31,7 @@ latest_posts:
 <h2>Research</h2>
 <div class="news">
   <p>
-    We are a computational and experimental materials design group at the Korean Institute of Energy Technology (KENTECH).
+    We are a computational materials design group at the Korean Institute of Energy Technology (KENTECH).<br>
     Our research focuses on understanding and engineering the structure–property relationships of energy materials,
     with particular emphasis on halide perovskites and related materials for photovoltaics and light-emitting devices.
   </p>
