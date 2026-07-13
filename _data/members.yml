@@ -1,15 +1,17 @@
 - name: Young-Kwang Jung
   name_sub: (정영광)
   role: Principal Investigator
-  image: youngkwangjung_card.png
+  image: youngkwangjung_pic.png
   url: /members/youngkwangjung/
 
-- name: Graduate Student 1
-  role: Ph.D. Student
-  image: prof_pic.jpg
-  url: /members/student1/
+- name: Ken-Tech Kim
+  name_sub: (김켄텍)
+  role: Integrated Ph.D. Student
+  image: kentechkim_pic.jpg
+  url: /members/kentechkim/
 
-- name: Undergraduate Student 1
-  role: Undergraduate Researcher
-  image: prof_pic.jpg
-  url: /members/undergrad1/
+- name: Ju Na
+  name_sub: (나주)
+  role: Undergrad Research Intern
+  image: juna_pic.jpg
+  url: /members/juna/

@@ -64,7 +64,18 @@
         {% assign journal_text = '' %}
       {% endif %}
 
-      {% capture pub_info %}<em>{{ journal_text }}</em>{% if entry.volume %} <strong>{{ entry.volume }}</strong>{% endif %}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% if entry.year %} ({{ entry.year }}){% endif %}{% if entry.note %} [{{ entry.note }}]{% endif %}{% endcapture %}
+      {% assign cover_url = '' %}
+      {% if entry.cover %}
+        {% if entry.cover contains '://' %}
+          {% assign cover_url = entry.cover %}
+        {% else %}
+          {% assign cover_url = 'https://doi.org/' | append: entry.cover %}
+        {% endif %}
+      {% endif %}
+
+      {% capture note_text %}{% if cover_url != '' %}<a href="{{ cover_url }}" target="_blank" rel="noopener noreferrer">{{ entry.note }}</a>{% else %}{{ entry.note }}{% endif %}{% endcapture %}
+
+      {% capture pub_info %}<em>{{ journal_text }}</em>{% if entry.volume %} <strong>{{ entry.volume }}</strong>{% endif %}{% if entry.pages %}, {{ entry.pages }}{% endif %}{% if entry.year %} ({{ entry.year }}){% endif %}{% if entry.note %} [{{ note_text }}]{% endif %}{% endcapture %}
 
       {% if pub_url != '' %}
         <a href="{{ pub_url }}" target="_blank" rel="noopener noreferrer">{{ pub_info }}</a>
@@ -73,10 +84,9 @@
       {% endif %}
     </div>
 
-    {% if entry.cover or entry.abstract %}
+    {% if entry.abstract %}
       <div class="links">
-        {% if entry.cover %}<a href="{{ entry.cover }}" target="_blank" rel="noopener noreferrer" class="btn btn-sm z-depth-0">Cover Art</a>{% endif %}
-        {% if entry.abstract %}<a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>{% endif %}
+        <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
       </div>
     {% endif %}
     {% if entry.abstract %}

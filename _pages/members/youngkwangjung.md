@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: center
-  image: youngkwangjung_profile.png
+  image: youngkwangjung_pic.png
   image_circular: true
   more_info: >
     <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600;">Young-Kwang Jung (정영광), Ph.D.</div>

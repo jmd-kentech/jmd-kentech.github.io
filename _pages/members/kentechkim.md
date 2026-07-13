@@ -1,16 +1,16 @@
 ---
 layout: about
-title: Undergraduate Student 1
-permalink: /members/undergrad1/
+title: Ken-Tech Kim
+permalink: /members/kentechkim/
 
 subtitle:
 
 profile:
   align: center
-  image: prof_pic.jpg
+  image: kentechkim_pic.jpg
   image_circular: true
   more_info: >
-    <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600; color: var(--global-theme-color);">Undergraduate Student 1</div>
+    <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600;">Ken-Tech Kim (김켄텍)</div>
     <div style="margin-top: 0.5rem; font-size: 2rem; display: flex; gap: 0.75rem; justify-content: center;">
       <a href="mailto:email@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
     </div>
@@ -46,5 +46,5 @@ latest_posts:
 
 <h2>Research Interests</h2>
 <div class="news">
-  <p>Biography coming soon.</p>
+  <p>Density Functional Theory</p>
 </div>
