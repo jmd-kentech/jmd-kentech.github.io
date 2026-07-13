@@ -29,6 +29,7 @@ latest_posts:
   .post-header { display: none; }
   .more-info a { color: inherit; transition: color 0.2s; }
   .more-info a:hover { color: var(--global-theme-color) !important; }
+  article h2 { color: var(--global-text-color) !important; }
 </style>
 
 <h2>Education</h2>
