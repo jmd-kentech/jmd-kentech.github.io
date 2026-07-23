@@ -11,7 +11,7 @@ profile:
   more_info: >
     <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600;">Young-Kwang Jung (정영광), Ph.D.</div>
     <div style="margin-top: 0.5rem; font-size: 2rem; display: flex; gap: 0.75rem; justify-content: center;">
-      <a href="mailto:yk.jung@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="mailto:ykjung@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://scholar.google.com/citations?user=gKwOFtUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
       <a href="https://orcid.org/0000-0003-3848-8163" title="ORCID" target="_blank"><i class="ai ai-orcid"></i></a>
       <a href="/assets/pdf/youngkwangjung_cv.pdf" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
