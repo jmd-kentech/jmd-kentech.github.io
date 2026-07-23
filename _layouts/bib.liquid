@@ -34,11 +34,18 @@
           {%- if forloop.last %}and {% endif -%}
         {% endif %}
         {%- if author_is_self -%}
-          <em>{{- author.first }} {{ author_last_html -}}</em>
+          <em>
+            {{- author.first }}
+            {{ author_last_html -}}
+          </em>
         {%- elsif coauthor_url -%}
-          <a href="{{ coauthor_url }}">{{- author.first }} {{ author_last_html -}}</a>
+          <a href="{{ coauthor_url }}">
+            {{- author.first }}
+            {{ author_last_html -}}
+          </a>
         {%- else -%}
-          {{- author.first }} {{ author_last_html -}}
+          {{- author.first }}
+          {{ author_last_html -}}
         {%- endif -%}
       {% endfor %}
     </div>

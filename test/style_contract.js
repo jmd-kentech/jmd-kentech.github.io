@@ -61,7 +61,47 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+// _includes/_layouts/_sass may contain tracked local overrides of gem-owned
+// files (see docs/BOUNDARIES.md); every file present must be accounted for
+// in .al-folio-overrides.yml. Other paths must never exist at all.
+const trackedOverridePaths = () => {
+  const set = new Set();
+  if (!exists(".al-folio-overrides.yml")) return set;
+  const re = /^  (\S[^\n:]*):\s*$/gm;
+  let match;
+  for (const text = read(".al-folio-overrides.yml"); (match = re.exec(text)); ) {
+    set.add(match[1]);
+  }
+  return set;
+};
+
+const listFilesRecursive = (relDir) => {
+  const abs = path.join(root, relDir);
+  if (!fs.existsSync(abs)) return [];
+  let out = [];
+  for (const entry of fs.readdirSync(abs, { withFileTypes: true })) {
+    const rel = `${relDir}/${entry.name}`;
+    if (entry.isDirectory()) {
+      out = out.concat(listFilesRecursive(rel));
+    } else {
+      out.push(rel);
+    }
+  }
+  return out;
+};
+
+const tracked = trackedOverridePaths();
+for (const overridablePath of ["_includes", "_layouts", "_sass"]) {
+  for (const file of listFilesRecursive(overridablePath)) {
+    if (!tracked.has(file)) {
+      failures.push(
+        `Untracked file \`${file}\` in core component path \`${overridablePath}\`; either remove it or track it as a local override in \`.al-folio-overrides.yml\`.`
+      );
+    }
+  }
+}
+
+for (const forbiddenPath of ["_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }

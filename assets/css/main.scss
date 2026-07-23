@@ -29,5 +29,22 @@
 @use "teachings";
 @use "typograms";
 
-/* Local overrides — applied last so they win the cascade */
-@use "custom";
+/*******************************************************************************
+ * Custom theme color overrides — applied last so they win the cascade
+ ******************************************************************************/
+
+:root {
+  --global-theme-color: #1e4469;
+  --global-hover-color: #1e4469;
+}
+
+.profile img.rounded-circle {
+  width: 200px !important;
+  height: 200px !important;
+  object-fit: cover;
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #4a80b0;
+  --global-hover-color: #4a80b0;
+}
