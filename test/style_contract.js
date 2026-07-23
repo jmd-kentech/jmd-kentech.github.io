@@ -68,8 +68,9 @@ const trackedOverridePaths = () => {
   const set = new Set();
   if (!exists(".al-folio-overrides.yml")) return set;
   const re = /^  (\S[^\n:]*):\s*$/gm;
+  const text = read(".al-folio-overrides.yml");
   let match;
-  for (const text = read(".al-folio-overrides.yml"); (match = re.exec(text)); ) {
+  while ((match = re.exec(text))) {
     set.add(match[1]);
   }
   return set;

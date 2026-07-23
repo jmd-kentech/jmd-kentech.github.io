@@ -4,11 +4,21 @@ set -euo pipefail
 tmp_dir="$(mktemp -d)"
 tmp_override="${tmp_dir}/distill-override.yml"
 tmp_site="${tmp_dir}/site"
+fixture_dir="test/fixtures/integration-distill"
+post_fixture="_posts/2018-12-22-distill.md"
+bib_fixture="assets/bibliography/2018-12-22-distill.bib"
 
 cleanup() {
+  rm -f "${post_fixture}" "${bib_fixture}"
   rm -rf "${tmp_dir}"
 }
 trap cleanup EXIT
+
+# Fixture post/bibliography are copied into the real site source (not just
+# the temp build dir) because Jekyll always reads its collections from
+# there; they're removed again in cleanup() regardless of pass/fail.
+cp "${fixture_dir}/2018-12-22-distill.md" "${post_fixture}"
+cp "${fixture_dir}/2018-12-22-distill.bib" "${bib_fixture}"
 
 cat >"${tmp_override}" <<'YAML'
 giscus:
@@ -20,7 +30,10 @@ YAML
 
 bundle exec jekyll build --config "_config.yml,${tmp_override}" -d "${tmp_site}" >/dev/null
 
-distill_page="${tmp_site}/blog/2021/distill/index.html"
+# Path prefix follows this site's `permalink: /posts/:year/:title/` in
+# _config.yml (year from the fixture's front-matter `date:` override, slug
+# from its filename), not upstream al-folio's default `/blog/...`.
+distill_page="${tmp_site}/posts/2021/distill/index.html"
 
 if [ ! -f "${distill_page}" ]; then
   echo "distill page was not generated at ${distill_page}" >&2
