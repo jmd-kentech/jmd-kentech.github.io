@@ -9,7 +9,7 @@
   var COLORS = ["#f94144", "#f3722c", "#f9c74f", "#90be6d", "#43aa8b", "#577590", "#ff6392"];
   var PARTICLES_PER_BURST = 14;
   var DURATION_MS = 700;
-  var NAVIGATION_DELAY_MS = 180;
+  var NAVIGATION_DELAY_MS = 300;
 
   document.addEventListener("click", function (event) {
     burst(event.clientX, event.clientY);
