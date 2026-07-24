@@ -27,8 +27,6 @@ latest_posts:
 ---
 
 <style>
-  .post-header { display: none; }
-  .profile .more-info { font-family: inherit; }
   .more-info a { color: inherit; transition: color 0.2s, transform 0.2s; display: inline-block; }
   .more-info a:hover { color: var(--global-theme-color) !important; transform: scale(1.2); }
   article h2 { color: var(--global-text-color) !important; }
