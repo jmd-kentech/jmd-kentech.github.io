@@ -17,6 +17,9 @@ trap cleanup EXIT
 # Fixture post/bibliography are copied into the real site source (not just
 # the temp build dir) because Jekyll always reads its collections from
 # there; they're removed again in cleanup() regardless of pass/fail.
+# assets/bibliography/ isn't otherwise tracked by git (git doesn't track
+# empty directories), so it may not exist in a fresh checkout.
+mkdir -p "$(dirname "${bib_fixture}")" "$(dirname "${post_fixture}")"
 cp "${fixture_dir}/2018-12-22-distill.md" "${post_fixture}"
 cp "${fixture_dir}/2018-12-22-distill.bib" "${bib_fixture}"
 
