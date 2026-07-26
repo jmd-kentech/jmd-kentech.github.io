@@ -9,7 +9,8 @@
   var COLORS = ["#f94144", "#f3722c", "#f9c74f", "#90be6d", "#43aa8b", "#577590", "#ff6392"];
   var PARTICLES_PER_BURST = 14;
   var DURATION_MS = 700;
-  var NAVIGATION_DELAY_MS = 700;
+  var SAME_TAB_DELAY_MS = 140;
+  var NEW_TAB_DELAY_MS = 700;
 
   document.addEventListener("click", function (event) {
     burst(event.clientX, event.clientY);
@@ -24,13 +25,16 @@
       event.preventDefault();
       var href = link.href;
       var opensNewTab = link.target === "_blank";
-      setTimeout(function () {
-        if (opensNewTab) {
-          window.open(href, "_blank", "noopener,noreferrer");
-        } else {
-          window.location.href = href;
-        }
-      }, NAVIGATION_DELAY_MS);
+      setTimeout(
+        function () {
+          if (opensNewTab) {
+            window.open(href, "_blank", "noopener,noreferrer");
+          } else {
+            window.location.href = href;
+          }
+        },
+        opensNewTab ? NEW_TAB_DELAY_MS : SAME_TAB_DELAY_MS
+      );
     }
   });
 
