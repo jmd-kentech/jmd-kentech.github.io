@@ -15,24 +15,21 @@
     burst(event.clientX, event.clientY);
 
     // A same-page click's burst is visible on its own, but a link click
-    // navigates away almost immediately and would cut the animation off
-    // before it's ever seen. Hold same-tab, same-origin navigations just
-    // long enough for the burst to register, then continue on.
+    // navigates away (or, for target="_blank", steals focus to a new tab)
+    // almost immediately and would cut the animation off before it's ever
+    // seen. Hold same-origin link clicks just long enough for the burst to
+    // register, then continue on to wherever the link was headed.
     var link = event.target.closest && event.target.closest("a[href]");
-    if (
-      link &&
-      !event.defaultPrevented &&
-      !event.metaKey &&
-      !event.ctrlKey &&
-      !event.shiftKey &&
-      !event.altKey &&
-      link.target !== "_blank" &&
-      link.origin === location.origin
-    ) {
+    if (link && !event.defaultPrevented && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && link.origin === location.origin) {
       event.preventDefault();
       var href = link.href;
+      var opensNewTab = link.target === "_blank";
       setTimeout(function () {
-        window.location.href = href;
+        if (opensNewTab) {
+          window.open(href, "_blank", "noopener,noreferrer");
+        } else {
+          window.location.href = href;
+        }
       }, NAVIGATION_DELAY_MS);
     }
   });
