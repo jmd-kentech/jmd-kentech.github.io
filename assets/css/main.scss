@@ -48,3 +48,15 @@ html[data-theme="dark"] {
   --global-theme-color: #4a80b0;
   --global-hover-color: #4a80b0;
 }
+
+// The theme's mobile navbar dropdown left-aligns its menu items; this site
+// wants it right-aligned to match the toggle button's position instead.
+@media (max-width: 575.98px) {
+  .navbar .navbar-collapse-main {
+    text-align: right;
+  }
+
+  .navbar .navbar-menu-list {
+    align-items: flex-end;
+  }
+}
