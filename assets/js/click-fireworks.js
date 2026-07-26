@@ -10,31 +10,33 @@
   var PARTICLES_PER_BURST = 14;
   var DURATION_MS = 700;
   var SAME_TAB_DELAY_MS = 140;
-  var NEW_TAB_DELAY_MS = 700;
 
   document.addEventListener("click", function (event) {
     burst(event.clientX, event.clientY);
 
-    // A same-page click's burst is visible on its own, but a link click
-    // navigates away (or, for target="_blank", steals focus to a new tab)
-    // almost immediately and would cut the animation off before it's ever
-    // seen. Hold same-origin link clicks just long enough for the burst to
-    // register, then continue on to wherever the link was headed.
+    // A same-page click's burst is visible on its own, but a same-tab link
+    // click navigates away almost immediately and would cut the animation
+    // off before it's ever seen, so hold those just long enough for the
+    // burst to register. target="_blank" links are deliberately left
+    // alone: delaying window.open() away from the original click's user
+    // gesture gets it silently blocked as a popup in some browsers, which
+    // is worse than not delaying it at all.
     var link = event.target.closest && event.target.closest("a[href]");
-    if (link && !event.defaultPrevented && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey && link.origin === location.origin) {
+    if (
+      link &&
+      !event.defaultPrevented &&
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.shiftKey &&
+      !event.altKey &&
+      link.target !== "_blank" &&
+      link.origin === location.origin
+    ) {
       event.preventDefault();
       var href = link.href;
-      var opensNewTab = link.target === "_blank";
-      setTimeout(
-        function () {
-          if (opensNewTab) {
-            window.open(href, "_blank", "noopener,noreferrer");
-          } else {
-            window.location.href = href;
-          }
-        },
-        opensNewTab ? NEW_TAB_DELAY_MS : SAME_TAB_DELAY_MS
-      );
+      setTimeout(function () {
+        window.location.href = href;
+      }, SAME_TAB_DELAY_MS);
     }
   });
 
