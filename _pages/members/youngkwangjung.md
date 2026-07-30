@@ -31,6 +31,10 @@ latest_posts:
   .more-info a { color: inherit; transition: color 0.2s, transform 0.2s; display: inline-block; }
   .more-info a:hover { color: var(--global-theme-color) !important; transform: scale(1.2); }
   article h2 { color: var(--global-text-color) !important; }
+  /* The profile figure is a shrink-to-fit flex item with no width rule of its own, so it
+     falls back to the layout's `sizes` hint (900px * 0.3 = 270px). Pin it 1.5x wider. */
+  .profile figure { width: 405px; max-width: 100%; margin-left: auto; margin-right: auto; }
+  .profile figure img { width: 100%; height: auto; }
 </style>
 
 <h2>Education</h2>
