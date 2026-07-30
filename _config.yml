@@ -7,9 +7,11 @@ first_name: Young-Kwang
 middle_name:
 last_name: Jung
 contact_note:
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
+# ">-" folds newlines and strips the trailing one; plain ">" leaves a newline that
+# ends up as a stray space in <meta name="description"> and breaks JSON-LD strings.
+description: >-
   Jung Materials Design Group @ KENTECH — computational materials design for energy applications.
-footer_text: >
+footer_text: >-
   Jung Materials Design Group @ KENTECH.
 keywords: materials design, computational materials, perovskite, energy materials, KENTECH
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -96,8 +98,13 @@ max_width: 930px
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
-serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/og-image.png # The site-wide (default for all links) Open Graph preview image
+# The theme's Schema.org block emits a WebSite entity named after the individual
+# (first_name/last_name), which competes with the WebSite block in _pages/about.md
+# that names this site "JMD @ KENTECH". Keep it off so Google sees one site name.
+serve_schema_org: false # Include Schema.org in the HTML head
+# Open Graph requires an absolute URL; a site-relative path is not resolved by
+# Facebook/Slack/KakaoTalk and the preview image silently fails to load.
+og_image: https://jmd-kentech.github.io/assets/img/og-image.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
