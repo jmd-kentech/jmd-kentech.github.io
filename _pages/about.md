@@ -21,6 +21,22 @@ latest_posts:
   enabled: false
 ---
 
+<!--
+  Tells Google which name to show as the "site name" line above search results.
+  Google reads WebSite structured data from the homepage only, so this belongs here
+  rather than in a shared include. `name` is the preferred short form; `alternateName`
+  keeps the full group name as a recognised alternative.
+-->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JMD @ KENTECH",
+    "alternateName": ["Jung Materials Design Group", "Jung Materials Design Group @ KENTECH"],
+    "url": "{{ site.url }}{{ site.baseurl }}/"
+  }
+</script>
+
 <style>
   .profile { max-width: 70% !important; width: 70% !important; margin: 0 auto 1.5rem !important; }
   .profile figure { max-width: 100% !important; width: 100% !important; margin: 0 !important; }
