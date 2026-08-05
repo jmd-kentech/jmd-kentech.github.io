@@ -14,6 +14,7 @@ profile:
       <a href="mailto:ykjung@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
       <a href="https://scholar.google.com/citations?user=gKwOFtUAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
       <a href="https://orcid.org/0000-0003-3848-8163" title="ORCID" target="_blank"><i class="ai ai-orcid"></i></a>
+      <a href="https://www.linkedin.com/in/youngkwang-jung-467238b3" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="/assets/pdf/youngkwangjung_cv.pdf" title="CV" target="_blank"><i class="ai ai-cv"></i></a>
     </div>
 
