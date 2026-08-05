@@ -12,8 +12,8 @@ profile:
   more_info: >
     <div style="margin-top: 0.75rem; font-size: 1.3rem; font-weight: 600;">Ju Na (나주)</div>
     <div style="margin-top: 0.5rem; font-size: 2rem; display: flex; gap: 0.75rem; justify-content: center;">
-      <a href="mailto:email@kentech.ac.kr" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://scholar.google.com/" title="Google Scholar" target="_blank"><i class="ai ai-google-scholar"></i></a>
+      <a title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
     </div>
 
 selected_papers: false
@@ -27,7 +27,7 @@ latest_posts:
 ---
 
 <style>
-  .more-info a { color: inherit; transition: color 0.2s, transform 0.2s; display: inline-block; }
+  .more-info a { color: inherit; cursor: pointer; transition: color 0.2s, transform 0.2s; display: inline-block; }
   .more-info a:hover { color: var(--global-theme-color) !important; transform: scale(1.2); }
   article h2 { color: var(--global-text-color) !important; }
 </style>
